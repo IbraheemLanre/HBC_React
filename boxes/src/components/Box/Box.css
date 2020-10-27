@@ -1,0 +1,10 @@
+.box {
+  background: darkorange;
+  color: white;
+  border: 1px solid #eee;
+  box-shadow: 0 0 5px #f4f4f4;
+  padding: 1rem;
+  border-radius: 5px;
+  height: 200px;
+  width: 200px;
+}
