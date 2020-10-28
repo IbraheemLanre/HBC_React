@@ -6,7 +6,7 @@ import dog from "./component/Animal/dog.jpg";
 import cat from "./component/Animal/cat.jpg";
 
 function Welcome() {
-  return <h1>Hello World</h1>;
+  return <h1>Welcome to The Animal Kingdom</h1>;
 }
 
 function App() {
