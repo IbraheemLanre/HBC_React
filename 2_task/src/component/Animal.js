@@ -1,6 +1,6 @@
 import React from "react";
 import "./Animal.css";
-// import image from "./Animal/Lion.jpg";
+
 
 function Animal(props) {
   const popup = () => {
