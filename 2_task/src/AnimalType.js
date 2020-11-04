@@ -18,22 +18,12 @@ class AnimalType extends Component {
   };
 
   render() {
-    return (
-      <div className="App">
-        <Animal
-          name={this.state.animals[0].name}
-          image={this.state.animals[0].image}
-        />
-        <Animal
-          name={this.state.animals[1].name}
-          image={this.state.animals[1].image}
-        />
-        <Animal
-          name={this.state.animals[2].name}
-          image={this.state.animals[2].image}
-        />
-      </div>
-    );
+    const animalList = this.state.animals.map((animal) => {
+      return (
+        <Animal key={animal.name} name={animal.name} image={animal.image} />
+      );
+    });
+    return <div className="App">{animalList}</div>;
   }
 }
 
