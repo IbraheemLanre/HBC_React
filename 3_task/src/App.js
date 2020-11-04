@@ -1,6 +1,6 @@
 import { React, Component } from "react";
 import "./App.css";
-
+import Button from "./components/buttons/Button";
 class App extends Component {
   state = {
     likes: 0,
@@ -33,9 +33,11 @@ class App extends Component {
     return (
       <div className="App">
         <h1>Total like: {this.state.likes}</h1>
-        <button onClick={this.addLikes}>Add like</button>
-        <button onClick={this.removeLikes}>Remove like</button>
-        <button onClick={this.resetLikes}>Reset like</button>
+        <Button
+          addLike={this.addLikes}
+          removeLike={this.removeLikes}
+          resetLike={this.resetLikes}
+        />
       </div>
     );
   }
