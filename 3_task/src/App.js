@@ -13,7 +13,7 @@ class App extends Component {
     });
   };
 
-  removeLikes = (like) => {
+  removeLikes = () => {
     console.log("Removed like");
     if (this.state.likes > 0) {
       this.setState({

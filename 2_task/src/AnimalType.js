@@ -7,19 +7,31 @@ import cat from "./component/Animal/cat.jpg";
 
 class AnimalType extends Component {
   state = {
-    animals: {
-      animalOne: "Lion",
-      animalTwo: "Dog",
-      animalThree: "Cat",
-    },
+    animals: [
+      {
+        name: "Lion",
+        image: lion,
+      },
+      { name: "Dog", image: dog },
+      { name: "Cat", image: cat },
+    ],
   };
 
   render() {
     return (
       <div className="App">
-        <Animal name={this.state.animals.animalOne} image={lion} />
-        <Animal name={this.state.animals.animalTwo} image={dog} />
-        <Animal name={this.state.animals.animalThree} image={cat} />
+        <Animal
+          name={this.state.animals[0].name}
+          image={this.state.animals[0].image}
+        />
+        <Animal
+          name={this.state.animals[1].name}
+          image={this.state.animals[1].image}
+        />
+        <Animal
+          name={this.state.animals[2].name}
+          image={this.state.animals[2].image}
+        />
       </div>
     );
   }
