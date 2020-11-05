@@ -1,0 +1,12 @@
+.all-btn {
+  display: flex;
+}
+
+button {
+  background: rgb(243, 220, 231);
+  border: none;
+  padding: 1rem;
+  margin-right: 1rem;
+  border-radius: 5px;
+  box-shadow: 0 0 2px #090908;
+}
