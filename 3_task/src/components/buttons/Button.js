@@ -1,4 +1,5 @@
 import { React, Component } from "react";
+import "./Button.css";
 
 class Button extends Component {
   render() {
@@ -6,7 +7,7 @@ class Button extends Component {
     const removeLike = this.props.removeLike;
     const resetLike = this.props.resetLike;
     return (
-      <div>
+      <div className="all-btn">
         <button onClick={addLike}>Add Like</button>
         <button onClick={removeLike}>Remove Like </button>
         <button onClick={resetLike}>Reset</button>
