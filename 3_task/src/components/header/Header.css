@@ -1,0 +1,21 @@
+.header {
+  background-color: #090908;
+  color: #fff;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.title {
+  font-size: 2rem;
+}
+
+.date {
+  margin-right: 1rem;
+}

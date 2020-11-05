@@ -1,8 +1,7 @@
 .App {
-  padding: 5rem;
+  /* padding: 5rem; */
+  margin-top: 10rem;
   display: grid;
   justify-content: center;
   align-items: center;
 }
-
-

@@ -2,6 +2,8 @@ import { React, Component } from "react";
 import "./App.css";
 import Button from "./components/buttons/Button";
 import LikeDisplay from "./components/likeDisplay/LikeDisplay";
+import Footer from "./components/footer/Footer";
+import Header from "./components/header/Header";
 class App extends Component {
   state = {
     likes: 0,
@@ -39,6 +41,8 @@ class App extends Component {
           removeLike={this.removeLikes}
           resetLike={this.resetLikes}
         />
+        <Footer />
+        <Header />
       </div>
     );
   }

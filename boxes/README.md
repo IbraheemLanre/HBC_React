@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Boxes
 
-This is a bare minimum exmple of creating a component and rendering it to the root element.
+This is a bare minimum example of creating a component and rendering it to the root element.
 
 ## Screenshot
 
