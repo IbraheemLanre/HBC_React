@@ -19,3 +19,6 @@ The _AnimalType.js_ file contains the component class content which is currently
 import AnimalType from "./AnimalType";
 ReactDOM.render(<AnimalType />, document.getElementById("root"));
 ```
+
+### Screenshot
+![Animals](./src/img/Animals.png?raw=True)
