@@ -1,8 +1,9 @@
 .article {
-  margin-top: 9rem;
+  margin: 2rem 3rem 2rem 3rem;
   background: brown;
   color: #fff;
   padding: 1rem;
-  height: 500px;
-  width: 600px;
+  height: 400px;
+  width: 500px;
+  /* margin: 0 auto; */
 }

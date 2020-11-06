@@ -1,12 +1,18 @@
 import { React, Component } from "react";
 import Button from "../button/Button";
-import car from "../img/car.jpg";
+import ict from "../img/ict.jpg";
 import "./Article.css";
 
 class Article extends Component {
   state = {
     likes: 0,
-    img: car,
+    img: ict,
+  };
+
+  giveVote = () => {
+    this.setState({
+      likes: this.state.likes + 1,
+    });
   };
   render() {
     return (
@@ -25,7 +31,7 @@ class Article extends Component {
         </div>
 
         <p>{this.state.likes} people like this article</p>
-        <Button />
+        <Button click={this.giveVote} />
       </div>
     );
   }
