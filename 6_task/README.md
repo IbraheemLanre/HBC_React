@@ -1,70 +1,19 @@
-# Getting Started with Create React App
+# REACT FORM APP
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This focus of this app is using react to creat a form that is responsive to user inputs. Each time a new user fills each field in the form, there is an immediate rendering of the information the bottom part of the app, after completing the form and the submit button is clicked, there is a popup asking to verify the correctness of the information from the user. And if the submit button is also clicked upon verification, then the information is cleared and sent to the database, upon reload a new user can also put in his/her information.
 
-## Available Scripts
+## COMPONENTS
+- The **FORMCONTAINER** component is stateful component(class component) contains the state for which every input is initialized. The *handleInputData()* function grabs the input data and each time using the *setState()* function to update the user data. *The handleSubmit()* function is called when the form is submitted and updates the **showPopUp** state to true. It is as if the base class.
 
-In the project directory, you can run:
+- The **VIEW** component is a stateless (functional) component placed in the form component to display the results as the user updates his/her data.
 
-### `npm start`
+- The **POPUP** component is a stateless(functional) components placed in the form component, acting as the popup display
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- The **TEXTINPUT** component is a stateless(functional) component created to give room for a dynamic update of user data.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- The **TEXTAREA** component is a stateless(functional) component created dynamically.
 
-### `npm test`
+- The **ROLE** component is a stateless component created to use the **Array map()** function taking elements from  **roleOptions** in the state object.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Screenshot
+![form screenshot](./public/formpic.png?raw=true)
