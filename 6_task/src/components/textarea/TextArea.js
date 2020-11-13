@@ -1,9 +1,10 @@
 import React from "react";
+import './TextArea.css'
 
 const TextArea = (props) => {
   return (
-    <div>
-      <label htmlFor={props.name}>{props.title}</label>
+    <div className="textarea-item">
+      <label htmlFor={props.name} className="textarea-label">{props.title}</label>
       <textarea
         name={props.name}
         id={props.name}
@@ -12,7 +13,8 @@ const TextArea = (props) => {
         value={props.value}
         onChange={props.handleChange}
         placeholder={props.placeholder}
-      ></textarea>
+      />
+     
     </div>
   );
 };

@@ -1,0 +1,14 @@
+.role-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.select-opt {
+  margin: 1rem;
+  width: 320px;
+  height: 60px;
+  padding: 0.5rem;
+  border: 3px solid whitesmoke;
+  border-radius: 5px;
+}

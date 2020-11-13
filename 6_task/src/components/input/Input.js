@@ -1,16 +1,19 @@
 import React from "react";
+import "./Input.css";
 
 const InputField = (props) => {
   return (
-    <div className="form-group">
-      <label htmlFor={props.name} className="form-lable">
+    <div className="input-item">
+      <label htmlFor={props.name} className="input-label">
         {props.title}
       </label>
       <input
         name={props.name}
+        id={props.name}
         type={props.type}
         value={props.value}
-        oncChange={props.handleChange}
+        required
+        onChange={props.handleChange}
         placeholder={props.placeholder}
       />
     </div>

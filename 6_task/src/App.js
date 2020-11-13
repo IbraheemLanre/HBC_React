@@ -6,11 +6,10 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>Welcome Here</h1>
-        <FormContainer/>
+        <FormContainer />
       </div>
     );
   }
 }
 
-export default App
+export default App;

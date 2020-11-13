@@ -2,6 +2,10 @@ import { React, Component } from "react";
 import InputField from "../input/Input";
 import Role from "../role/Role";
 import TextArea from "../textarea/TextArea";
+import View from "../view/View";
+import PopUp from "../popup/PopUp";
+
+import "./Form.css";
 
 class FormContainer extends Component {
   state = {
@@ -10,81 +14,98 @@ class FormContainer extends Component {
     phoneNumber: "",
     message: "",
     role: "",
-    submitting: false,
     roleOptions: ["Product Owner", "Software Engineer", "Designer"],
+    showPopUp: false,
+  };
+
+  handleInputData = (e) => {
+    this.setState((state) => ({ ...state, [e.target.name]: e.target.value }));
   };
 
   handleSubmit = (e) => {
     e.preventDefault();
     this.setState({
-      submitting: true,
+      showPopUp: true,
     });
 
-    setTimeout(() => {
-      this.setState({
-        submitting: false,
-      });
-    }, 3000);
+    // setTimeout(() => {
+    //   this.setState({
+    //     showPopUp: false,
+    //   });
+    // }, 10000);
   };
-
-  handleInputData = (e) => {
-    this.setState({
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  handleReset() {}
 
   render() {
     return (
       <div className="container">
-        {this.state.submitting && <div>Submitting Form..</div>}
-        <form onSubmit={this.handleSubmit}>
-          <InputField
-            type={"text"}
-            title={"Firstname"}
-            name={"firstname"}
-            value={this.state.firstname}
-            placeholder={"Enter Firstname"}
-            required
-            handleChange={this.handleInputData}
+        <h1>Welcome Here</h1>
+        <div className="form-area">
+          <form onSubmit={this.handleSubmit}>
+            <InputField
+              type={"text"}
+              title={"Firstname"}
+              name={"firstname"}
+              value={this.state.firstname}
+              placeholder={"Enter Firstname"}
+              handleChange={this.handleInputData}
+            />
+            <InputField
+              type={"text"}
+              title={"Lastname"}
+              name={"lastname"}
+              value={this.state.lastname}
+              placeholder={"Enter Lastname"}
+              handleChange={this.handleInputData}
+            />
+            <InputField
+              type={"number"}
+              title={"Phone Number"}
+              name={"phoneNumber"}
+              value={this.state.phoneNumber}
+              placeholder={"Enter phone number"}
+              handleChange={this.handleInputData}
+            />
+            <TextArea
+              title={"Message"}
+              col={"40"}
+              row={"5"}
+              value={this.state.message}
+              name={"message"}
+              placeholder={"Write your message here"}
+              handleChange={this.handleInputData}
+            />
+            <Role
+              title={"Role"}
+              name={"role"}
+              value={this.state.role}
+              options={this.state.roleOptions}
+              placeholder={"Select Role"}
+              handleChange={this.handleInputData}
+            />
+            <div className="btn">
+              <button type="submit">Submit</button>
+            </div>
+          </form>
+        </div>
+        <div className="resultArea">
+          {this.state.showPopUp && (
+            <PopUp
+              firstname={this.state.firstname}
+              lastname={this.state.lastname}
+              phoneNumber={this.state.phoneNumber}
+              message={this.state.message}
+              role={this.state.role}
+            />
+          )}
+
+          <View
+            firstname={this.state.firstname}
+            lastname={this.state.lastname}
+            phoneNumber={this.state.phoneNumber}
+            message={this.state.message}
+            role={this.state.role}
           />
-          <InputField
-            type={"text"}
-            title={"Lastname"}
-            name={"lastname"}
-            value={this.state.lastname}
-            placeholder={"Enter Lastname"}
-            required
-            handleChange={this.handleInputData}
-          />
-          <InputField
-            type={"number"}
-            title={"Phone Number"}
-            name={"phoneNumber"}
-            value={this.state.phoneNumber}
-            placeholder={"Enter phone number"}
-            required
-            handleChange={this.handleInputData}
-          />
-          <TextArea
-            title={"Message"}
-            cols={10}
-            row={5}
-            value={this.state.message}
-            name={"message"}
-            placeholder={"Write your message here"}
-          />
-          <Role
-            title={"Role"}
-            name={"role"}
-            value={this.state.role}
-            options={this.state.roleOptions}
-            placeholder={"Select Role"}
-            handleChange={this.handleInputData}
-          />
-          <button type="submit">Submit</button>
-        </form>
+        </div>
       </div>
     );
   }
