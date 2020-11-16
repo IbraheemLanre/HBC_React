@@ -15,24 +15,29 @@ class FormContainer extends Component {
     message: "",
     role: "",
     roleOptions: ["Product Owner", "Software Engineer", "Designer"],
+    items: [],
     showPopUp: false,
   };
 
   handleInputData = (e) => {
-    this.setState((state) => ({ ...state, [e.target.name]: e.target.value }));
+    this.setState({ [e.target.name]: e.target.value });
   };
 
   handleSubmit = (e) => {
-    e.preventDefault();
-    this.setState({
-      showPopUp: true,
+    let items = [...this.state.items];
+    items.push({
+      firstname: this.state.firstname,
+      lastname: this.state.lastname,
+      phoneNumber: this.state.phoneNumber,
+      message: this.state.message,
+      role: this.state.role,
     });
 
-    // setTimeout(() => {
-    //   this.setState({
-    //     showPopUp: false,
-    //   });
-    // }, 10000);
+    this.setState({
+      items,
+      showPopUp: true,
+    });
+    e.preventDefault();
   };
 
   render() {
@@ -98,13 +103,7 @@ class FormContainer extends Component {
             />
           )}
 
-          <View
-            firstname={this.state.firstname}
-            lastname={this.state.lastname}
-            phoneNumber={this.state.phoneNumber}
-            message={this.state.message}
-            role={this.state.role}
-          />
+          <View items={this.state.items} />
         </div>
       </div>
     );

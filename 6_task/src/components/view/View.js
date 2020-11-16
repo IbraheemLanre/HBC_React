@@ -6,11 +6,17 @@ const View = (props) => {
     <div className="view">
       <div className="content">
         <h2>You submitted the following:</h2>
-        <p>Firstname: {props.firstname} </p>
-        <p>Lastname: {props.lastname}</p>
-        <p>Phone Number: {props.phoneNumber}</p>
-        <p>Message: {props.message}</p>
-        <p>Role: {props.role}</p>
+        {props.items.map((item) => {
+          return (
+            <div>
+              <p>Firstname: {item.firstname}</p>
+              <p>Lastname: {item.lastname}</p>
+              <p>Phone Number: {item.phoneNumber}</p>
+              <p>Message: {item.message}</p>
+              <p>Role: {item.role}</p>
+            </div>
+          );
+        })}
       </div>
     </div>
   );
