@@ -25,6 +25,7 @@ class FormContainer extends Component {
 
   handleSubmit = (e) => {
     let items = [...this.state.items];
+
     items.push({
       firstname: this.state.firstname,
       lastname: this.state.lastname,
