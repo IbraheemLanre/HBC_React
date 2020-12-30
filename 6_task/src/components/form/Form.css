@@ -1,16 +1,20 @@
 .container {
   display: grid;
   justify-content: center;
+  grid-template-columns: repeat(2, 1fr);
   margin: 1rem;
 }
 
 .form-area {
   background-color: rgb(113, 216, 113);
-  padding: 2rem;
-  color: #FFF;
+  padding: 0.5rem;
+  color: #fff;
 }
-h1 {
-  text-align: center;
+
+.resultArea {
+  background-color: rgb(113, 216, 113);
+  padding: 0.5rem;
+  color: #fff;
 }
 
 .btn {

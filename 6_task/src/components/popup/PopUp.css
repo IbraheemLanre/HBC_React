@@ -22,7 +22,8 @@
   align-items: center;
 }
 
-.showPopUp button {
+#btn-yes,
+#btn-no {
   background: lightgrey;
   position: absolute;
   bottom: 5px;

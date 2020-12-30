@@ -1,0 +1,25 @@
+{
+  "notes": [
+    {
+      "id": 1,
+      "firstname": "Ibraheem",
+      "lastname": "Ola-Adua",
+      "phoneNumber": "040-267-7680",
+      "message": "Something really important",
+      "role": "Student"
+    },
+    {
+      "firstname": "Prosper",
+      "lastname": "Arure",
+      "phoneNumber": "0404167311",
+      "message": "lnfn",
+      "role": "Software Engineer",
+      "roleOptions": [
+        "Product Owner",
+        "Software Engineer",
+        "Designer"
+      ],
+      "id": 2
+    }
+  ]
+}

@@ -44,7 +44,6 @@ class FormContainer extends Component {
   render() {
     return (
       <div className="container">
-        <h1>Welcome Here</h1>
         <div className="form-area">
           <form onSubmit={this.handleSubmit}>
             <InputField
@@ -94,18 +93,17 @@ class FormContainer extends Component {
           </form>
         </div>
         <div className="resultArea">
-          {this.state.showPopUp && (
-            <PopUp
-              firstname={this.state.firstname}
-              lastname={this.state.lastname}
-              phoneNumber={this.state.phoneNumber}
-              message={this.state.message}
-              role={this.state.role}
-            />
-          )}
-
           <View items={this.state.items} />
         </div>
+        {this.state.showPopUp && (
+          <PopUp
+            firstname={this.state.firstname}
+            lastname={this.state.lastname}
+            phoneNumber={this.state.phoneNumber}
+            message={this.state.message}
+            role={this.state.role}
+          />
+        )}
       </div>
     );
   }
