@@ -15,7 +15,7 @@ const Form_useState = () => {
     phoneNumber: "",
     message: "",
     role: "",
-    roleOptions: ["Product Owner", "Software Engineer", "Designer"],
+    // roleOptions: ["Product Owner", "Software Engineer", "Designer"],
   });
 
   const [showPopUp, setShowPopUp] = useState(false);
@@ -75,7 +75,6 @@ const Form_useState = () => {
             title={"Role"}
             name={"role"}
             value={note.role}
-            options={note.roleOptions}
             placeholder={"Select Role"}
             handleChange={handleInputData}
           />

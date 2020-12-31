@@ -12,13 +12,8 @@
       "firstname": "Prosper",
       "lastname": "Arure",
       "phoneNumber": "0404167311",
-      "message": "lnfn",
+      "message": "lkn",
       "role": "Software Engineer",
-      "roleOptions": [
-        "Product Owner",
-        "Software Engineer",
-        "Designer"
-      ],
       "id": 2
     }
   ]

@@ -1,5 +1,5 @@
 import React from "react";
-import './Role.css'
+import "./Role.css";
 
 const Role = (props) => {
   return (
@@ -15,13 +15,9 @@ const Role = (props) => {
         <option value="" disabled>
           {props.placeholder}
         </option>
-        {props.options.map((option) => {
-          return (
-            <option value={option} key={option} label={option}>
-              {option}
-            </option>
-          );
-        })}
+        <option value="Software Engineer">Software Engineer</option>
+        <option value="Designer">Designer</option>
+        <option value="Product Owner">Product Ownner</option>
       </select>
     </div>
   );
