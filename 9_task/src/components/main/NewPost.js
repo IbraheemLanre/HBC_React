@@ -33,33 +33,6 @@ const NewPost = () => {
     }
   };
 
-  // const AlertError = () => {
-  //   const [show, setShow] = useState(true);
-  //   if (show) {
-  //     return (
-  //       <Alert variant="danger" onClose={() => setShow(false)} dismissible>
-  //         <Alert.Heading>Not submitted! You got an error!</Alert.Heading>
-  //       </Alert>
-  //     );
-  //   }
-  // };
-
-  // const AlertSuccess = () => {
-  //   const [show, setShow] = useState(true);
-  //   return (
-  //     <>
-  //       <Alert show={show} variant="success">
-  //         <Alert.Heading>Blog was posted</Alert.Heading>
-  //         <div className="d-flex justify-content-end">
-  //       <Button onClick={() => setShow(false)} variant="outline-success">
-  //         Close
-  //       </Button>
-  //     </div>
-  //       </Alert>
-  //     </>
-  //   );
-  // };
-
   const addPostHandler = (e) => {
     const form = e.currentTarget;
     if (form.checkValidity() === false) {
@@ -70,7 +43,6 @@ const NewPost = () => {
       // AlertSuccess()
       axios.post("http://localhost:3001/posts", newPost).then((res) => {
         console.log(res.data);
-        
       });
     }
 
@@ -82,7 +54,7 @@ const NewPost = () => {
       <Jumbotron>
         <h1>Create A New Post</h1>
         <hr />
-        <Form noValidate validated={validated} onSubmit={addPostHandler} >
+        <Form noValidate validated={validated} onSubmit={addPostHandler}>
           <Form.Group as={Row} controlId="validationCustom01">
             <Form.Label column sm={2} htmlFor="title">
               Title
