@@ -15,9 +15,7 @@ const PopUp = ({ firstname, lastname, phoneNumber, message, role, submit }) => {
         <p>Phone Number: {phoneNumber}</p>
         <p>Message: {message}</p>
         <p>Role: {role}</p>
-        <input type="button" id="btn-yes" onClick={submit} value="Yes, I am sure">
-          
-        </input>
+        <input type="button" id="btn-yes" onClick={submit} value="Yes, I am sure"/>
         <button id="btn-no" onClick={closeHandler}>
           No, I don't want to post it
         </button>
